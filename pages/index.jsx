@@ -1,38 +1,27 @@
 import React from 'react'
-import Head from 'next/head'
-import Nav from '../components/nav'
+import Layout from '../components/layout'
 
-function Home() {
+function Index() {
     return (
-        <div>
-            <Head>
-                <title>Home</title>
-                <link rel="icon" href="/static/favicon.ico"/>
-            </Head>
-
-            <Nav/>
-
+        <Layout>
             <div className='hero'>
                 <h1 className='title'>Welcome to Link!</h1>
                 <p className='description'>
-                    To get started, edit <code>pages/index.js</code> and save to reload.
+                    Link是链接🔗的意思——正如万物是联系的。
                 </p>
 
                 <div className='row'>
-                    <a href='https://nextjs.org/docs' className='card'>
-                        <h3>Documentation &rarr;</h3>
-                        <p>Learn more about Next.js in the documentation.</p>
+                    <a href='/post-list' className='card'>
+                        <h3>文章列表 &rarr;</h3>
+                        <p>一些文章。</p>
                     </a>
                     <a href='https://nextjs.org/learn' className='card'>
                         <h3>Next.js Learn &rarr;</h3>
                         <p>Learn about Next.js by following an interactive tutorial!</p>
                     </a>
-                    <a
-                        href='https://github.com/zeit/next.js/tree/master/examples'
-                        className='card'
-                    >
-                        <h3>Examples &rarr;</h3>
-                        <p>Find other example boilerplates on the Next.js GitHub.</p>
+                    <a href='https://nextjs.org/docs' className='card'>
+                        <h3>Documentation &rarr;</h3>
+                        <p>Learn more about Next.js in the documentation.</p>
                     </a>
                 </div>
             </div>
@@ -82,9 +71,9 @@ function Home() {
                 font-size: 13px;
                 color: #333;
             }
-    `}</style>
-        </div>
+            `}</style>
+        </Layout>
     )
 }
 
-export default Home
+export default Index

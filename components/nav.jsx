@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const links = [
-    { href: 'https://zeit.co/now', label: 'ZEIT' },
+    { href: 'https://jianzhao.org/', label: '微小的工作' },
     { href: 'https://github.com/cbdyzj/link', label: 'GitHub' }
 ].map(link => {
     link.key = `nav-link-${link.href}-${link.label}`
@@ -35,6 +35,7 @@ function Nav() {
                 text-align: center;
             }
             ul {
+                margin: 8px 0 0 0;
                 display: flex;
                 justify-content: space-between;
             }
@@ -56,3 +57,4 @@ function Nav() {
 }
 
 export default Nav
+
