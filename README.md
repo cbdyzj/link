@@ -3,5 +3,6 @@
 ## Start
 
 ```sh
-yarn && yarn start
+yarn install --ignore-optional
+yarn start
 ```
