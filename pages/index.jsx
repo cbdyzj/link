@@ -1,13 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout'
+import redirectPatterns from '../config/redirect_patterns'
 
-function Index() {
+function Index(props) {
     return (
         <Layout>
             <div className='hero'>
                 <h1 className='title'>Welcome to Link!</h1>
                 <p className='description'>
-                    Link是链接🔗的意思——正如万物是联系的。
+                    Link🔗：连接万物
                 </p>
 
                 <div className='row'>
@@ -74,6 +75,19 @@ function Index() {
             `}</style>
         </Layout>
     )
+}
+
+Index.getInitialProps = async ({ req, res }) => {
+    const { host } = req.headers
+    for (const pattern of redirectPatterns) {
+        if (pattern.pattern.test(host)) {
+            res.setHeader('Location', pattern.to);
+            res.statusCode = 302
+            res.end()
+            return
+        }
+    }
+    return { name: 'link' }
 }
 
 export default Index
