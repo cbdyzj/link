@@ -12,7 +12,7 @@ function Index(props) {
                 </p>
 
                 <div className='row'>
-                    <a href='/post-list' className='card'>
+                    <a href='/post_list' className='card'>
                         <h3>文章列表 &rarr;</h3>
                         <p>一些文章。</p>
                     </a>
