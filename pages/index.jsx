@@ -16,14 +16,6 @@ function Index(props) {
                         <h3>文章列表 &rarr;</h3>
                         <p>一些文章。</p>
                     </a>
-                    <a href='https://nextjs.org/learn' className='card'>
-                        <h3>Next.js Learn &rarr;</h3>
-                        <p>Learn about Next.js by following an interactive tutorial!</p>
-                    </a>
-                    <a href='https://nextjs.org/docs' className='card'>
-                        <h3>Documentation &rarr;</h3>
-                        <p>Learn more about Next.js in the documentation.</p>
-                    </a>
                 </div>
             </div>
 
