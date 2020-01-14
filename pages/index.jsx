@@ -16,6 +16,10 @@ function Index(props) {
                         <h3>文章列表 &rarr;</h3>
                         <p>一些文章。</p>
                     </a>
+                    <a href='https://nextjs.org/docs' className='card'>
+                        <h3>Documentation &rarr;</h3>
+                        <p>Learn more about Next.js in the documentation.</p>
+                    </a>
                 </div>
             </div>
 
@@ -40,11 +44,12 @@ function Index(props) {
                 margin: 80px auto 40px;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: center;
             }
             .card {
                 padding: 18px 18px 24px;
                 width: 220px;
+                margin: 0 1%;
                 text-align: left;
                 text-decoration: none;
                 color: #434343;
