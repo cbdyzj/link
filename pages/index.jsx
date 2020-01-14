@@ -6,7 +6,7 @@ function Index(props) {
     return (
         <Layout>
             <div className='hero'>
-                <h1 className='title'>Welcome to Link!</h1>
+                <h1 className='title'>Hello Link!</h1>
                 <p className='description'>
                     Link🔗：连接万物
                 </p>
