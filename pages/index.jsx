@@ -74,7 +74,11 @@ function Index(props) {
     )
 }
 
-Index.getInitialProps = async ({ req, res }) => {
+Index.getInitialProps = async (ctx) => {
+    if(!ctx.req){
+        return { name: 'link' }
+    }
+    const { req, res } = ctx
     const { host } = req.headers
     for (const pattern of redirectPatterns) {
         if (pattern.pattern.test(host)) {
