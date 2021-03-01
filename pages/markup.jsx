@@ -2,7 +2,16 @@ import React from 'react'
 import Layout from '../components/layout'
 import marked from 'marked'
 
-import doc from '../README.md'
+const doc = `
+# Link
+
+## Start
+
+\`\`\`sh
+yarn install --ignore-optional
+yarn start
+\`\`\`
+`
 
 function Markup(props) {
     return (
