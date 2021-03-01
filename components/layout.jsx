@@ -9,7 +9,6 @@ function Layout(props) {
         <div>
             <Head>
                 <title>{props.title || 'Link'}</title>
-                <link rel="icon" href="/static/favicon.ico" />
             </Head>
             <Nav />
             <hr />
