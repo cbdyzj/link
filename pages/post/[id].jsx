@@ -6,8 +6,8 @@ function Post(props) {
     return (
         <Layout title={`Link：${props.id}`}>
             <div className="post">
-                <h2>文章{props.id}</h2>
-                <p>文章{props.id}内容</p>
+                <h2>Post: {props.id}</h2>
+                <p>Post: {props.id}</p>
             </div>
             <style jsx>{`
             .post {

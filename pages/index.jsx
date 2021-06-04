@@ -8,13 +8,13 @@ function Index(props) {
             <div className='hero'>
                 <h1 className='title'>Hello Link!</h1>
                 <p className='description'>
-                    Link🔗：连接万物
+                    Link
                 </p>
 
                 <div className='row'>
                     <a href={'/post-list'} className='card'>
-                        <h3>文章列表 &rarr;</h3>
-                        <p>一些文章。</p>
+                        <h3>Post List &rarr;</h3>
+                        <p>Post List</p>
                     </a>
                     <a href='https://nextjs.org/docs' className='card'>
                         <h3>Documentation &rarr;</h3>

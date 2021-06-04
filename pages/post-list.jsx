@@ -4,22 +4,22 @@ import Layout from '../components/layout'
 function PostList() {
 
     return (
-        <Layout title="文章列表">
-            <h2 className="title">文章列表</h2>
+        <Layout title="Post List">
+            <h2 className="title">Post List</h2>
             <table className="post-list">
                 <thead>
                 <tr>
-                    <th>文章</th>
-                    <th>发布时间</th>
+                    <th>Post</th>
+                    <th>Time</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td><a href="/post/1">文章1</a></td>
+                    <td><a href="/post/1">Post 1</a></td>
                     <td>2019-09-28</td>
                 </tr>
                 <tr>
-                    <td><a href="/post/2">文章2</a></td>
+                    <td><a href="/post/2">Post 2</a></td>
                     <td>2019-09-28</td>
                 </tr>
                 </tbody>
@@ -56,6 +56,7 @@ function PostList() {
                 border-style: solid;
                 border-color: #666;
                 background-color: #fff;
+            }
             `
             }</style>
         </Layout>
