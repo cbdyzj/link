@@ -1,10 +1,8 @@
 import React from 'react'
-
 import Head from 'next/head'
-import Nav from './nav'
+import Nav from './Nav'
 
-
-function Layout(props) {
+export default function Layout(props) {
     return (
         <div>
             <Head>
@@ -16,5 +14,3 @@ function Layout(props) {
         </div>
     )
 }
-
-export default Layout

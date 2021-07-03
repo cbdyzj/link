@@ -1,8 +1,9 @@
 import React from 'react'
-import Layout from '../components/layout'
-import redirectPatterns from '../config/redirect_patterns'
+import Layout from '../components/Layout.jsx'
+import redirectPatterns from '../config/redirect_patterns.js'
 
-function Index(props) {
+export default function Index(props) {
+    // noinspection HtmlUnknownAttribute
     return (
         <Layout>
             <div className='hero'>
@@ -22,31 +23,34 @@ function Index(props) {
                     </a>
                 </div>
             </div>
-
             <style jsx>{`
-            .hero {
+              .hero {
                 width: 100%;
                 color: #333;
-            }
-            .title {
+              }
+
+              .title {
                 margin: 0;
                 width: 100%;
                 padding-top: 80px;
                 line-height: 1.15;
                 font-size: 48px;
-            }
-            .title,
-            .description {
+              }
+
+              .title,
+              .description {
                 text-align: center;
-            }
-            .row {
+              }
+
+              .row {
                 max-width: 880px;
                 margin: 80px auto 40px;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-            }
-            .card {
+              }
+
+              .card {
                 padding: 18px 18px 24px;
                 width: 220px;
                 margin: 0 1%;
@@ -54,30 +58,30 @@ function Index(props) {
                 text-decoration: none;
                 color: #434343;
                 border: 1px solid #9b9b9b;
-            }
-            .card:hover {
+              }
+
+              .card:hover {
                 border-color: #067df7;
-            }
-            .card h3 {
+              }
+
+              .card h3 {
                 margin: 0;
                 color: #067df7;
                 font-size: 18px;
-            }
-            .card p {
+              }
+
+              .card p {
                 margin: 0;
                 padding: 12px 0 0;
                 font-size: 13px;
                 color: #333;
-            }
+              }
             `}</style>
         </Layout>
     )
 }
 
-Index.getInitialProps = async (ctx) => {
-    if(!ctx.req){
-        return { name: 'link' }
-    }
+export async function getServerSideProps(ctx) {
     const { req, res } = ctx
     const { host } = req.headers
     for (const pattern of redirectPatterns) {
@@ -88,7 +92,9 @@ Index.getInitialProps = async (ctx) => {
             return
         }
     }
-    return { name: 'link' }
+    return {
+        props: {
+            name: 'link',
+        },
+    }
 }
-
-export default Index

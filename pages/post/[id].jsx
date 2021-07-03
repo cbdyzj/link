@@ -1,8 +1,8 @@
 import React from 'react'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout.jsx'
 
-function Post(props) {
-
+export default function Post(props) {
+    // noinspection HtmlUnknownAttribute
     return (
         <Layout title={`Link：${props.id}`}>
             <div className="post">
@@ -10,18 +10,21 @@ function Post(props) {
                 <p>Post: {props.id}</p>
             </div>
             <style jsx>{`
-            .post {
+              .post {
                 margin: 30px;
                 text-align: center;
-            }
+              }
             `}</style>
         </Layout>
     )
 }
 
-Post.getInitialProps = async function (req) {
-    const { id } = req.query
-    return { id }
+export async function getServerSideProps(ctx) {
+    const { id } = ctx.query
+    return {
+        props: {
+            id,
+        },
+    }
 }
 
-export default Post

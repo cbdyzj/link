@@ -9,7 +9,8 @@ const links = [
     return link
 })
 
-function Nav() {
+export default function Nav() {
+    // noinspection HtmlUnknownAttribute
     return (
         <nav>
             <ul>
@@ -26,35 +27,37 @@ function Nav() {
             </ul>
 
             <style jsx>{`
-            :global(body) {
+              :global(body) {
                 margin: 0;
-                font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-                Helvetica, sans-serif;
-            }
-            nav {
+                font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
+              }
+
+              nav {
                 text-align: center;
-            }
-            ul {
+              }
+
+              ul {
                 margin: 8px 0 0 0;
                 display: flex;
                 justify-content: space-between;
-            }
-            nav > ul {
+              }
+
+              nav > ul {
                 padding: 4px 16px;
-            }
-            li {
+              }
+
+              li {
                 display: flex;
                 padding: 6px 8px;
-            }
-            a {
+              }
+
+              a {
                 color: #067df7;
                 text-decoration: none;
                 font-size: 13px;
-            }
-    `}</style>
+              }
+            `}</style>
         </nav>
     )
 }
-
-export default Nav
 

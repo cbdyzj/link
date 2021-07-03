@@ -1,8 +1,8 @@
 import React from 'react'
-import Layout from '../components/layout'
 import marked from 'marked'
+import Layout from '../components/Layout.jsx'
 
-const doc = `
+const document = `
 # Link
 
 ## Start
@@ -13,24 +13,25 @@ yarn start
 \`\`\`
 `
 
-function Markup(props) {
+export default function Markup(props) {
+    // noinspection HtmlUnknownAttribute
     return (
         <Layout title="Markup">
             <div className="content"
                  dangerouslySetInnerHTML={{ __html: props.md }}/>
             <style jsx>{`
-                .content {
-                    margin: 60px;
-                }
+              .content {
+                margin: 60px;
+              }
             `}</style>
         </Layout>
     )
 }
 
-Markup.getInitialProps = async function (req) {
+export async function getServerSideProps() {
     return {
-        md: marked(doc),
+        props: {
+            md: marked(document),
+        }
     }
 }
-
-export default Markup
