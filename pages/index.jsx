@@ -86,10 +86,10 @@ export async function getServerSideProps(ctx) {
     const { host } = req.headers
     for (const pattern of redirectPatterns) {
         if (pattern.pattern.test(host)) {
-            res.setHeader('Location', pattern.to);
+            res.setHeader('Location', pattern.to)
             res.statusCode = 302
             res.end()
-            return
+            return { props: {} }
         }
     }
     return {
