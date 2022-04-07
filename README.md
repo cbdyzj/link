@@ -3,6 +3,6 @@
 ## Start
 
 ```sh
-yarn install --ignore-optional
-yarn start
+npm install
+npm start
 ```
